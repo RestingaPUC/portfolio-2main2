@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-screen h-fit flex justify-between items-center bg-headerColor text-white font-bold px-4 py-4">
+    <header className="w-screen h-[57px] flex justify-between items-center bg-headerColor text-white font-bold px-4 py-4">
       <svg
         width="122"
         height="25"
@@ -26,29 +26,34 @@ export default function Header() {
           fill="white"
         />
       </svg>
-      <nav className={`flex justify-center items-start fixed rounded-l-[50px]
-      top-0 h-full bg-purple-950 transition-all duration-700 z-10 px-5
+      <nav className={`flex justify-center items-start fixed rounded-l-3xl
+      top-0 h-full bg-purple-950 transition-all duration-500 z-10 px-5
       ${showMenu ? "right-0" : "-right-full"}`}>
         <ul className="flex flex-col gap-10 text-lg pt-32">
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-                <a href="#projetos">Projetos</a>
-            </li>
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#projetos">Projetos</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
         </ul>
       </nav>
       <div className="flex justify-center items-center text-lg">
-        <div className={`flex justify-center items-center transition-opacity duration-700 ${showMenu ? "opacity-0" : "opacity-100"}`}>
-        {showMenu ? null : <FiSun className="cursor-pointer"/>}
-        {showMenu ? null : <span className={`h-6 w-px bg-white mx-3`}></span>}
-        {showMenu ? null : <FiMoon className="cursor-pointer"/>}</div>
+        <FiSun className={`cursor-pointer transition-opacity duration-500
+          ${showMenu ? "opacity-0" : "opacity-100"}`} />
+
+        <span className={`h-6 w-px bg-white mx-3 transition-opacity duration-500
+          ${showMenu ? "opacity-0" : "opacity-100"}`}></span>
+
+        <FiMoon className={`cursor-pointer transition-opacity duration-500
+          ${showMenu ? "opacity-0" : "opacity-100"}`} />
+
         <IoApps className={`ml-5 cursor-pointer z-0 ${showMenu ? "hidden" : "visible"} `} onClick={toggleMenu}></IoApps>
         <FaTimes className={`ml-5 cursor-pointer z-10 ${showMenu ? "visible" : "hidden"}`} onClick={toggleMenu}></FaTimes>
       </div>
-    </header>
+    </header >
   );
 }

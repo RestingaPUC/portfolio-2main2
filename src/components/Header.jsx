@@ -26,10 +26,11 @@ export default function Header() {
           fill="white"
         />
       </svg>
-      <nav className={`flex justify-center items-start fixed rounded-l-3xl
-      top-0 h-full bg-purple-950 transition-all duration-500 z-10 px-5
-      ${showMenu ? "right-0" : "-right-full"}`}>
-        <ul className="flex flex-col gap-10 text-lg pt-32">
+      <nav className={`flex fixed rounded-b-3xl w-screen left-0
+      bg-headerColor transition-all duration-500 z-10
+      ${showMenu ? "top-0" : "-top-full"}`}>
+        <FaTimes className={`cursor-pointer text-lg absolute top-5 right-4 z-10 ${showMenu ? "visible" : "hidden"}`} onClick={toggleMenu}></FaTimes>
+        <ul className="flex justify-center gap-10 text-lg p-10 w-screen">
           <li>
             <a href="#sobre">Sobre</a>
           </li>
@@ -51,8 +52,8 @@ export default function Header() {
         <FiMoon className={`cursor-pointer transition-opacity duration-500
           ${showMenu ? "opacity-0" : "opacity-100"}`} />
 
-        <IoApps className={`ml-5 cursor-pointer z-0 ${showMenu ? "hidden" : "visible"} `} onClick={toggleMenu}></IoApps>
-        <FaTimes className={`ml-5 cursor-pointer z-10 ${showMenu ? "visible" : "hidden"}`} onClick={toggleMenu}></FaTimes>
+        <IoApps className={`ml-5 cursor-pointer z-0 transition-opacity duration-500
+          ${showMenu ? "opacity-0" : "opacity-100"}`} onClick={toggleMenu}></IoApps>
       </div>
     </header >
   );

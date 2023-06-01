@@ -14,10 +14,16 @@ export default function About() {
                     e poder contribuir para que ela seja ainda mais incrível é um objetivo de vida.
                 </p>
             </div>
-            <svg className="absolute bottom-0 flex text-center" width="150" height="81" viewBox="0 0 150 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 5L74.2879 75.2777C74.6795 75.675 75.3205 75.675 75.7121 75.2777L145 5"
-                    stroke="white" stroke-width="10" stroke-linecap="round" />
-            </svg>
+            <a href="#projetos">
+                <div className="absolute bottom-0 w-full flex justify-center animate-bounce">
+                    <svg width="60" height="70" viewBox="0 0 150 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 5L74.2879 75.2777C74.6795 75.675 75.3205 75.675 75.7121 75.2777L145 5"
+                            stroke="white" stroke-width="10" stroke-linecap="round" />
+                        <path d="M5 69L74.2879 139.278C74.6795 139.675 75.3205 139.675 75.7121 139.278L145 69"
+                            stroke="white" stroke-width="10" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </a>
         </div>
     )
 }

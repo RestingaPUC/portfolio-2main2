@@ -14,7 +14,7 @@ export default function About() {
                     e poder contribuir para que ela seja ainda mais incrível é um objetivo de vida.
                 </p>
             </div>
-            <a href="#projetos">
+            <a href="#project">
                 <div className="absolute bottom-0 w-full flex justify-center animate-bounce">
                     <svg width="60" height="70" viewBox="0 0 150 145" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 5L74.2879 75.2777C74.6795 75.675 75.3205 75.675 75.7121 75.2777L145 5"

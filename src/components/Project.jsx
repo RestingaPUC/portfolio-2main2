@@ -1,10 +1,18 @@
+import { useState } from 'react'
 import ProjImg from '../assets/imgs/Sem título.png'
 
 export default function Project() {
+
+    const [hideShadow, setHideShadow] = useState(true)
+
+    const hoverShadow = () => {
+        setHideShadow(!hideShadow)
+    }
+
     return (
         <div id="project" className='m-[50px] h-screen'>
-            <div className='projects-container rounded-xl p-5
-             shadow-[0_0_10px_0px_rgba(0,0,0,0.2)] hover:shadow-[0_0_10px_0px_rgba(47,19,73,1)]'>
+            <div onMouseEnter={hoverShadow} onMouseLeave={hoverShadow} className={`projects-container rounded-xl p-5
+             ${hideShadow ? "shadow-[0_0_10px_0px_rgba(47,19,73,1)]" : "shadow-none"}`}>
                 <img src={ProjImg} alt="2" className='w-full rounded-lg' />
                 <p className='pt-5 px-2 text-justify'> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Magnam quia quidem reiciendis itaque voluptatem incidunt dolorem.
